@@ -1,0 +1,104 @@
+figure img{
+    max-width: 100%;
+    height: 200px;
+}
+
+.container-icon{
+    position: relative;
+}
+
+.count-products{
+    position: absolute;
+    top: 55%;
+    right: 0;
+
+    background-color: #000;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#animales:checked > #jarrones_animales{
+    display: none;
+}
+
+
+.container-items{
+    display:grid;
+    width: auto;
+    grid-template-columns: repeat(6, 5fr);
+    gap: 20px;
+}
+
+.item{
+    border-radius: 10px;
+}
+
+.item:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+.item img{
+    width: 200%;
+    min-width: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s;
+}
+
+.item figure{
+    overflow: hidden;
+}
+
+.item:hover img{
+    transform: scale(0.9);
+}
+
+.info-product{
+    padding: 15px 30px;
+    line-height: 0.01;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+h2{
+    display: flex;
+    font-size: 120%;
+    font-weight: 900;
+}
+
+.price{
+    display: flex;
+    font-size: 120%;
+    font-weight: 900;
+}
+
+.info-product button{
+    border: none;
+    background: none;
+    background-color: #000;
+    color: #fff;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+@media (max-width:1024px) {
+    .container-items{
+        display:grid;
+        width: auto;
+        grid-template-columns: repeat(3, 5fr);
+        gap: 20px;
+    }
+}
+@media (max-width:600px) {
+    .container-items{
+        display:grid;
+        width: auto;
+        grid-template-columns: repeat(2, 5fr);
+        gap: 20px;
+    }
+}
